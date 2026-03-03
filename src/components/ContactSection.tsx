@@ -1,10 +1,29 @@
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, FileDown } from "lucide-react";
+import { Mail, Linkedin, FileDown, ChevronDown } from "lucide-react";
+
+const cvOptions = [
+  { label: "Naval Architect CV", file: "/cvs/Saim_Sharaf_CV_Naval_Architect.pdf" },
+  { label: "Marine Engineer CV", file: "/cvs/Saim_Sharaf_CV_Marine_Engineer.pdf" },
+  { label: "Marine Surveyor CV", file: "/cvs/Saim_Sharaf_CV_Marine_Surveyor.pdf" },
+];
 
 const ContactSection = () => {
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
   return (
     <section id="contact" className="py-20 md:py-32 px-4 relative overflow-hidden">
-      {/* Sonar rings background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[400px] h-[400px] rounded-full border border-primary/10 animate-sonar" />
         <div className="absolute w-[400px] h-[400px] rounded-full border border-primary/5 animate-sonar-delayed" />
@@ -51,13 +70,32 @@ const ContactSection = () => {
           </motion.a>
         </div>
 
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-full hover:opacity-90 transition-opacity"
-        >
-          <FileDown size={18} />
-          Download Full CV
-        </a>
+        <div className="relative inline-block" ref={dropdownRef}>
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-full hover:opacity-90 transition-opacity"
+          >
+            <FileDown size={18} />
+            Download CV
+            <ChevronDown size={16} className={`transition-transform ${open ? "rotate-180" : ""}`} />
+          </button>
+
+          {open && (
+            <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-56 rounded-lg border border-border bg-card shadow-xl overflow-hidden z-20">
+              {cvOptions.map((cv) => (
+                <a
+                  key={cv.file}
+                  href={cv.file}
+                  download
+                  onClick={() => setOpen(false)}
+                  className="block px-4 py-3 text-sm font-heading text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                >
+                  {cv.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

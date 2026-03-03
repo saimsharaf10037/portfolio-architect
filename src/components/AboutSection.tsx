@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Anchor, Award, GraduationCap } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const stats = [
   { icon: Anchor, label: "10+ Years Naval Service", sublabel: "Pakistan Navy" },
@@ -54,8 +55,8 @@ const AboutSection = () => {
             className="md:col-span-2 flex flex-col items-center gap-6"
           >
             {/* Photo placeholder */}
-            <div className="w-56 h-56 rounded-full border-4 border-primary/40 bg-card flex items-center justify-center">
-              <span className="text-muted-foreground text-sm font-heading">Photo Placeholder</span>
+            <div className="w-56 h-56 rounded-full border-4 border-primary/40 bg-card overflow-hidden">
+              <img src={profilePhoto} alt="Mohammad Saim Sharaf" className="w-full h-full object-cover" />
             </div>
 
             {/* Stat cards */}
