@@ -1,7 +1,29 @@
 import { motion } from "framer-motion";
-import { ArrowDown, FileText } from "lucide-react";
+import { ArrowDown, FileDown, ChevronDown } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+
+const cvOptions = [
+  { label: "Naval Architect CV", file: "/cvs/Saim_Sharaf_CV_Naval_Architect.pdf" },
+  { label: "Marine Engineer CV", file: "/cvs/Saim_Sharaf_CV_Marine_Engineer.pdf" },
+  { label: "Marine Surveyor CV", file: "/cvs/Saim_Sharaf_CV_Marine_Surveyor.pdf" },
+];
 
 const HeroSection = () => {
+  const [cvOpen, setCvOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setCvOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const titleWords = "Mohammad Saim Sharaf".split(" ");
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Sonar wave background */}
@@ -24,16 +46,19 @@ const HeroSection = () => {
           NAVAL ARCHITECT & MARINE ENGINEER
         </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-7xl font-heading font-bold text-foreground mb-6 leading-tight"
-        >
-          Mohammad Saim
-          <br />
-          <span className="text-primary">Sharaf</span>
-        </motion.h1>
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
+          {titleWords.map((word, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 + i * 0.1, duration: 0.6 }}
+              className={`inline-block mr-3 ${i === titleWords.length - 1 ? "text-primary" : ""}`}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -58,13 +83,31 @@ const HeroSection = () => {
           >
             View Research
           </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 border border-foreground/30 text-foreground font-heading font-semibold text-sm rounded-full hover:border-primary hover:text-primary transition-colors flex items-center gap-2"
-          >
-            <FileText size={16} />
-            Download CV
-          </a>
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setCvOpen((v) => !v)}
+              className="px-6 py-3 border border-foreground/30 text-foreground font-heading font-semibold text-sm rounded-full hover:border-primary hover:text-primary transition-colors flex items-center gap-2"
+            >
+              <FileDown size={16} />
+              Download CV
+              <ChevronDown size={14} className={`transition-transform ${cvOpen ? "rotate-180" : ""}`} />
+            </button>
+            {cvOpen && (
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-56 rounded-lg border border-border bg-card shadow-xl overflow-hidden z-20">
+                {cvOptions.map((cv) => (
+                  <a
+                    key={cv.file}
+                    href={cv.file}
+                    download
+                    onClick={() => setCvOpen(false)}
+                    className="block px-4 py-3 text-sm font-heading text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                  >
+                    {cv.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </motion.div>
 
         <motion.div
