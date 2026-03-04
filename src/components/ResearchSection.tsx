@@ -9,7 +9,7 @@ const researchInterests = [
 
 const ResearchSection = () => {
   return (
-    <section id="research" className="py-20 md:py-32 px-4 bg-secondary/30">
+    <section id="research" className="py-14 md:py-20 px-4 bg-secondary/30">
       <div className="max-w-6xl mx-auto">
         <p className="section-label text-center">RESEARCH</p>
         <h2 className="section-heading text-center">Academic & Applied Research</h2>

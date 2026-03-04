@@ -10,7 +10,7 @@ const stats = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 md:py-32 px-4">
+    <section id="about" className="py-14 md:py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-5 gap-12 items-start">
           {/* Left column */}

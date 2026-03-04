@@ -114,7 +114,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="mt-16"
         >
           <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
             <ArrowDown size={20} className="animate-bounce" />
