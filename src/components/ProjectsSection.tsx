@@ -20,7 +20,7 @@ const ProjectsSection = () => {
     : projectData.filter((p) => p.tags.includes(activeFilter));
 
   return (
-    <section id="projects" className="py-20 md:py-32 px-4">
+    <section id="projects" className="py-14 md:py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <p className="section-label text-center">PROJECTS & STUDIES</p>
         <h2 className="section-heading text-center">From Concept to Classification</h2>

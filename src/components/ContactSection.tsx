@@ -23,7 +23,7 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 md:py-32 px-4 relative overflow-hidden">
+    <section id="contact" className="py-14 md:py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[400px] h-[400px] rounded-full border border-primary/10 animate-sonar" />
         <div className="absolute w-[400px] h-[400px] rounded-full border border-primary/5 animate-sonar-delayed" />
