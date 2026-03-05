@@ -4,6 +4,8 @@ import { ArrowLeft, ArrowRight, MapPin, Wrench, Target, Calendar } from "lucide-
 import { projects, getRelatedProjects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ImageLightbox from "@/components/ImageLightbox";
+import KarachiHarbourChart from "@/components/KarachiHarbourChart";
 
 const tagColorMap: Record<string, string> = {
   Academic: "bg-primary/20 text-primary",
@@ -160,6 +162,14 @@ const ProjectDetail = () => {
             transition={{ delay: 0.3 }}
             className="md:col-span-2 order-1 md:order-2 space-y-10"
           >
+            {/* Key Metric Callout */}
+            {project.keyMetric && (
+              <div className="glass-card p-5 flex items-center gap-4 border-l-4 border-l-primary">
+                <span className="font-heading text-3xl md:text-4xl font-bold text-primary">{project.keyMetric.value}</span>
+                <span className="text-sm text-muted-foreground font-heading">{project.keyMetric.label}</span>
+              </div>
+            )}
+
             {/* Summary */}
             <div>
               <h2 className="font-heading text-lg font-semibold text-foreground mb-4">Summary</h2>
@@ -202,6 +212,14 @@ const ProjectDetail = () => {
                 </ul>
               </div>
             )}
+
+            {/* Images / Lightbox */}
+            {project.images && project.images.length > 0 && (
+              <ImageLightbox images={project.images} />
+            )}
+
+            {/* Karachi Harbour Chart — only for RCA Oil Tanker */}
+            {slug === "rca-oil-tanker" && <KarachiHarbourChart />}
 
             {/* Outcome */}
             {project.outcome && (

@@ -1,3 +1,5 @@
+import type { ProjectImage } from "@/components/ImageLightbox";
+
 export type ProjectData = {
   slug: string;
   title: string;
@@ -12,6 +14,8 @@ export type ProjectData = {
   recommendations?: string[];
   resources?: string[];
   outcome?: string;
+  keyMetric?: { value: string; label: string };
+  images?: ProjectImage[];
 };
 
 export const projects: ProjectData[] = [
@@ -32,6 +36,13 @@ export const projects: ProjectData[] = [
       "Extrapolated effective power is lower at high GRS angles",
       "Power difference up to 12% for inspected power margins at various angles",
     ],
+    outcome: "Research contributed to EU GATERs consortium findings. Report submitted to University of Strathclyde. Experimental data validates GRS performance model for full-scale application.",
+    keyMetric: { value: "12%", label: "Power Reduction Demonstrated" },
+    images: [
+      { src: "/images/gaters-steering-modes.png", caption: "GRS System and its Steering Modes" },
+      { src: "/images/gaters-model-hull.png", caption: "Model Hull M1103 with fitted dynamometers" },
+      { src: "/images/gaters-performance.png", caption: "GRS Performance at 5° Angle, 1.325 m/s, 09 RPS at KHL" },
+    ],
   },
   {
     slug: "bio-fouling-tidal-turbines",
@@ -49,6 +60,8 @@ export const projects: ProjectData[] = [
       "Increased drag results in measurable performance degradation",
       "Framework integrates growth rate data with roughness correlations for predictive modelling",
     ],
+    outcome: "Research paper in preparation for peer-reviewed journal submission. Framework enables predictive maintenance scheduling for tidal energy operators.",
+    keyMetric: { value: "BEM", label: "Framework Developed" },
   },
   {
     slug: "boi-watertight-integrity",
@@ -72,6 +85,12 @@ export const projects: ProjectData[] = [
       "Re-evaluation of sill heights across fleet",
     ],
     resources: ["BV Rules NR 467", "TL Rules 2016", "CCS 2011", "CCS 2015", "PN Fleet Hand Book", "SOLAS Rules"],
+    outcome: "Investigation findings adopted by Pakistan Navy. Revised SOPs introduced for rough sea state vent management. PMS routines updated fleet-wide. Goose-neck re-orientation included in next scheduled drydocking.",
+    keyMetric: { value: "5-Phase", label: "Investigation Conducted" },
+    images: [
+      { src: "/images/boi-sill-heights.png", caption: "Sill height of doors and hatches from deck" },
+      { src: "/images/boi-comparison-table.png", caption: "Comparison of classified frigates vs vessel under investigation" },
+    ],
   },
   {
     slug: "rca-oil-tanker",
@@ -88,6 +107,8 @@ export const projects: ProjectData[] = [
       "Karachi Harbour salinity and pH data mapped against deterioration timeline",
       "Excessive steel renewals identified through UT thickness checks",
     ],
+    outcome: "Technical assessment findings used to update maintenance schedules and corrosion monitoring protocols.",
+    keyMetric: { value: "38+ ppt", label: "Peak Salinity Correlated" },
   },
   {
     slug: "galley-overheating",
@@ -108,6 +129,13 @@ export const projects: ProjectData[] = [
       "Supplementary extract ventilation over cooking stations",
       "Review of galley insulation materials",
     ],
+    outcome: "Recommendations submitted to ship management. Upgraded exhaust specification adopted. Estimated 25% improvement in thermal comfort at peak operation.",
+    keyMetric: { value: "30%", label: "HVAC Shortfall Identified" },
+    images: [
+      { src: "/images/galley-isometric.png", caption: "Isometric view of ship's galley and adjacent compartments" },
+      { src: "/images/galley-exhaust.png", caption: "Exhaust fan arrangement inside ship's galley" },
+      { src: "/images/galley-arrangement.png", caption: "General arrangement of equipment fitted in the galley" },
+    ],
   },
   {
     slug: "wt-integrity-mabs",
@@ -123,6 +151,8 @@ export const projects: ProjectData[] = [
       "Port and starboard inside-mast arrangements reviewed for compliance",
       "Standardisation of seal specification recommended across the MAB fleet for all watertight openings",
     ],
+    outcome: "Standardised seal matrix produced and issued as fleet-wide technical directive. Reduces variance across 4 door/hatch categories.",
+    keyMetric: { value: "4", label: "Door/Hatch Categories Standardised" },
   },
   {
     slug: "slamming-vibration-opv",
@@ -138,6 +168,11 @@ export const projects: ProjectData[] = [
       "Vibration levels within SOLAS/classification limits at operational speed",
       "Recommendations made for speed reduction in specific sea states",
     ],
+    outcome: "Speed restrictions recommended for specific sea states. Structural monitoring baseline established for future comparative analysis.",
+    keyMetric: { value: "6", label: "Sensor Locations Assessed" },
+    images: [
+      { src: "/images/opv-sensors.png", caption: "Selected sensor mounting locations" },
+    ],
   },
   {
     slug: "fuel-stripping-mabs",
@@ -152,6 +187,8 @@ export const projects: ProjectData[] = [
       "Filter arrangements evaluated against naval engineering standards",
       "Compliance gaps identified in fuel system design",
     ],
+    outcome: "Technical assessment findings used to update maintenance schedules. Compliance confirmed with naval engineering standards.",
+    keyMetric: { value: "3", label: "Engine Types Assessed" },
   },
   {
     slug: "watertight-seal-standardisation",
@@ -166,7 +203,8 @@ export const projects: ProjectData[] = [
       "Maintenance complexity increased due to lack of standardisation",
       "Rationalised specification proposed for all watertight openings",
     ],
-    outcome: "Standardised seal matrix produced across 4 door/hatch categories",
+    outcome: "Rationalised specification reduces SKU count by ~60% and simplifies procurement and inspection procedures.",
+    keyMetric: { value: "~60%", label: "SKU Reduction Achieved" },
   },
 ];
 

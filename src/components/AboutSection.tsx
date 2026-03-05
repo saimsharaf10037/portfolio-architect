@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Anchor, Award, GraduationCap } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
+import CareerTimeline from "./CareerTimeline";
 
 const stats = [
   { icon: Anchor, label: "10+ Years Naval Service", sublabel: "Pakistan Navy" },
@@ -44,6 +45,8 @@ const AboutSection = () => {
                 analysis, and seakeeping performance. Currently based in the Netherlands with full working rights.
               </p>
             </div>
+
+            <CareerTimeline />
           </motion.div>
 
           {/* Right column */}
@@ -54,7 +57,7 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="md:col-span-2 flex flex-col items-center gap-6"
           >
-            {/* Photo placeholder */}
+            {/* Photo */}
             <div className="w-56 h-56 rounded-full border-4 border-primary/40 bg-card overflow-hidden">
               <img src={profilePhoto} alt="Mohammad Saim Sharaf" className="w-full h-full object-cover" />
             </div>
@@ -62,10 +65,7 @@ const AboutSection = () => {
             {/* Stat cards */}
             <div className="w-full space-y-3">
               {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="glass-card p-3 flex items-center gap-3"
-                >
+                <div key={stat.label} className="glass-card p-3 flex items-center gap-3">
                   <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <stat.icon size={18} className="text-primary" />
                   </div>
