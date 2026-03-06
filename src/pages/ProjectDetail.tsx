@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageLightbox from "@/components/ImageLightbox";
 import KarachiHarbourChart from "@/components/KarachiHarbourChart";
+import ProjectHeroBanner from "@/components/ProjectHeroBanner";
 
 const tagColorMap: Record<string, string> = {
   Academic: "bg-primary/20 text-primary",
@@ -42,11 +43,8 @@ const ProjectDetail = () => {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative pt-24 pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-          <div className="w-[500px] h-[500px] rounded-full border border-primary/20 animate-sonar" />
-        </div>
+      <section className="relative pt-24 pb-16 px-4 overflow-hidden" style={{ minHeight: "300px" }}>
+        <ProjectHeroBanner slug={slug || ""} />
 
         <div className="relative z-10 max-w-5xl mx-auto">
           <Link
