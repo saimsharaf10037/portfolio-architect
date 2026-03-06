@@ -7,6 +7,7 @@ import ResearchSection from "@/components/ResearchSection";
 import CredentialsSection from "@/components/CredentialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import FloatingCVButton from "@/components/FloatingCVButton";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <CredentialsSection />
       <ContactSection />
       <Footer />
+      <FloatingCVButton />
     </div>
   );
 };
