@@ -70,6 +70,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <ThemeToggle />
             </div>
           </motion.div>
         )}
