@@ -25,7 +25,7 @@ const HeroSection = () => {
   const titleWords = "Mohammad Saim Sharaf".split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-grain">
       {/* Sonar wave background */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-[600px] h-[600px] rounded-full border border-primary/20 animate-sonar" />
