@@ -10,7 +10,7 @@ const Footer = () => {
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </nav>
-          <p>© 2025 · Built with precision</p>
+          <p>© 2026 · Built with precision</p>
         </div>
       </div>
     </footer>
