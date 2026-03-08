@@ -60,6 +60,24 @@ const CareerTimeline = () => (
           <h4 className="font-heading text-sm font-semibold text-foreground">{event.title}</h4>
           <p className="text-xs text-primary/70 font-heading mb-1">{event.institution}</p>
           <p className="text-xs text-muted-foreground leading-relaxed">{event.detail}</p>
+
+          {/* Naval Officer photo */}
+          {event.title === "Naval Officer" && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="mt-3"
+            >
+              <img
+                src="/images/naval-uniform.png"
+                alt="Lt. Saim Sharaf in Pakistan Navy uniform"
+                className="w-full max-w-[240px] rounded-lg object-cover"
+                style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.4)" }}
+              />
+            </motion.div>
+          )}
         </motion.div>
       ))}
     </div>

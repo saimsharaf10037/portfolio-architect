@@ -181,19 +181,6 @@ const VolunteerSection = () => {
 
             {/* Right column — Media */}
             <div className="lg:w-[45%] flex flex-col gap-4">
-              <div className="relative overflow-hidden rounded-[10px] shimmer-container">
-                <img
-                  src="/images/pjb-poster.jpg"
-                  alt="Official PJB IMarEST & RINA Awareness Session Poster — Sep 2025"
-                  className="w-full max-h-[280px] object-cover object-top rounded-[10px]"
-                  style={{ boxShadow: "0 0 20px rgba(244,162,97,0.2)" }}
-                />
-                <div className="shimmer-sweep" />
-              </div>
-              <p className="text-[0.75rem] text-muted-foreground italic text-center">
-                Official PJB IMarEST & RINA Awareness Session Poster — Sep 2025
-              </p>
-
               <div>
                 <img
                   src="/images/pjb-session-group.png"
