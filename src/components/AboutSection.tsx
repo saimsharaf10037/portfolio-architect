@@ -24,25 +24,18 @@ const AboutSection = () => {
           >
             <p className="section-label">ABOUT</p>
             <h2 className="section-heading">
-              A decade at sea. A career built on precision.
+              Across Naval Architecture, Marine Engineering and Marine Surveying: delivering with depth, detail and precision.
             </h2>
 
             <div className="space-y-4 text-muted-foreground text-[15px] leading-relaxed">
               <p>
-                I'm a Naval Architect and Marine Engineer with over 10 years of service in the Pakistan Navy, 
-                holding decorations including the Tamgha-e-Azam and Youm-e-Marka-e-Haq. My career spans 
-                frigates, submarines, destroyers, patrol vessels, dredgers, and oil tankers.
+                I'm a Naval Architect and Marine Engineer with over 5 years of experience across vessel design, naval engineering, seafaring operations, hydrodynamics, technical analysis and marine surveys.
               </p>
               <p>
-                I hold a BEng in Mechanical Engineering from NUST (CGPA 3.47/4.0) and an MSc in Advanced 
-                Naval Architecture with Distinction from the University of Strathclyde, UK. I've conducted 
-                class surveys and onboard inspections with Bureau Veritas (BV), and I'm a registered 
-                Chartered Engineer (CEng CMarEng) under UK SPEC.
+                My work spans complex vessel types and demanding marine environments, with expertise in hull form development, CFD, resistance and propulsion, sea-keeping and engineering design. I have also led the operation and maintenance of propulsion and auxiliary machinery onboard, and conducted hull and machinery surveys as well as onboard inspections with Bureau Veritas, combining analytical depth with commercial shipping experience.
               </p>
               <p>
-                My technical toolkit includes ANSYS Fluent, Star CCM+, AutoCAD, MaxSurf, and Rhino 3D — 
-                applied across hull form optimization, hydrodynamic simulation, resistance and propulsion 
-                analysis, and seakeeping performance. Currently based in the Netherlands with full working rights.
+                I hold a BEng in Mechanical Engineering from NUST and an MSc in Advanced Naval Architecture with Distinction from the University of Strathclyde, UK. I am a UK SPEC registered Chartered Engineer (CEng CMarEng), currently based in the Netherlands and open to opportunities in marine surveying, naval architecture, marine engineering and field-based technical roles.
               </p>
             </div>
 
