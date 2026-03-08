@@ -67,19 +67,6 @@ const CredentialsSection = () => {
           ))}
         </div>
 
-        {/* Quote */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto text-center"
-        >
-          <Quote className="text-primary/30 mx-auto mb-4" size={40} />
-          <blockquote className="text-lg text-foreground italic leading-relaxed">
-            "Do one thing every day that scares you."
-          </blockquote>
-          <cite className="text-sm text-accent font-heading mt-3 block not-italic">— Eleanor Roosevelt</cite>
-        </motion.div>
       </div>
     </section>
   );
