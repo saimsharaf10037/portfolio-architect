@@ -13,7 +13,7 @@ interface Hobby {
 
 const hobbies: Hobby[] = [
   {
-    image: { src: "/images/hobby-tennis.jpg", objectPosition: "center top" },
+    image: { src: "/images/hobby-tennis.jpg", objectPosition: "center 40%" },
     title: "Tennis",
     tag: "Competitive Sport · State Level",
     description: "Active tennis player with state-level tournament participation. I regularly compete in local tournaments and closely follow the International Grand Slams. Inspired by Roger Federer's discipline, consistency and sportsmanship.",
@@ -44,7 +44,7 @@ const hobbies: Hobby[] = [
     description: "Strong interest in sustainable maritime solutions and regulatory-driven innovation. Currently developing a bio-fouling assessment framework to support performance optimisation and emissions reduction. Actively engaged with MARPOL regulations and the IMO 2050 net zero carbon emission goals.",
   },
   {
-    image: { src: "/images/hobby-horse.jpg", objectPosition: "center 30%" },
+    image: { src: "/images/hobby-horse.jpg", objectPosition: "center 20%" },
     title: "Horse Riding & Polo",
     tag: "Competitive Equestrian · Awarded",
     description: "Active equestrian with competitive riding experience from a young age. Awarded Best Rider of the Year (Under 18) in 2014 at Pano Aqil Cantt Saddle Club. Half-day horse riding in Campbeltown, Scotland. Occasionally participates in polo. Equestrian sport has strengthened balance, composure and decision-making under pressure.",
@@ -92,7 +92,7 @@ const HobbiesSection = () => {
                     alt={hobby.title}
                     className="w-full"
                     style={{
-                      height: 180,
+                      height: 220,
                       objectFit: "cover",
                       objectPosition: hobby.image.objectPosition,
                       borderRadius: "8px 8px 0 0",
