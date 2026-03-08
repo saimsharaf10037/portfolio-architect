@@ -207,3 +207,28 @@
 .light .teal-glow-hover:hover {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
+
+/* Shimmer sweep for poster image */
+.shimmer-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-sweep {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shimmer-once 1.5s ease-out 0.8s forwards;
+  pointer-events: none;
+}
+
+@keyframes shimmer-once {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

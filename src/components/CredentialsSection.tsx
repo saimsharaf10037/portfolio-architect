@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Medal, Quote } from "lucide-react";
+import { Medal } from "lucide-react";
 
 const awards = [
   { title: "Tamgha-e-Azam", org: "Pakistan Navy", desc: "Distinguished service decoration" },
