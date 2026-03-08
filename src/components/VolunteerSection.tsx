@@ -156,6 +156,26 @@ const VolunteerSection = () => {
                   "Grateful to Lt. Saim Sharaf for helping make this event a smooth and impactful experience."
                 </p>
                 <p className="text-[0.75rem] text-muted-foreground mt-1">— Syed Azeem Uddin Ahmed CEng CMarEng FIMarEST</p>
+
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {[
+                    { label: "PJB Session Recap", url: "https://www.linkedin.com/feed/update/urn:li:activity:7427248205643476993/" },
+                    { label: "Jan 2025 Session", url: "https://www.linkedin.com/feed/update/urn:li:activity:7383863981012340736/" },
+                    { label: "Sep 2025 PNEC Event", url: "https://www.linkedin.com/posts/syed-ahmed-ceng_on-28th-september-2025-i-had-the-privilege-activity-7378715100423176192-swfm" },
+                    { label: "PJB Announcement", url: "https://www.linkedin.com/feed/update/urn:li:activity:7376136337302908928/" },
+                  ].map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-heading text-blue-400 border border-blue-400/30 bg-blue-400/5 hover:bg-blue-400/15 transition-colors"
+                    >
+                      <Linkedin size={10} />
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
