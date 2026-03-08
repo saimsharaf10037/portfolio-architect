@@ -29,7 +29,7 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-muted-foreground text-[15px] leading-relaxed">
               <p>
-                I'm a Naval Architect and Marine Engineer with over 5 years of experience across vessel design, naval engineering, seafaring operations, hydrodynamics, technical analysis and marine surveys.
+                I'm a Naval Architect and Marine Engineer with 10 years of commissioned officer service in the Pakistan Navy, including over 5 years of experience across vessel design, marine engineering, seafaring operations, hydrodynamics, technical analysis and marine surveying.
               </p>
               <p>
                 My work spans complex vessel types and demanding marine environments, with expertise in hull form development, CFD, resistance and propulsion, sea-keeping and engineering design. I have also led the operation and maintenance of propulsion and auxiliary machinery onboard, and conducted hull and machinery surveys as well as onboard inspections with Bureau Veritas, combining analytical depth with commercial shipping experience.
