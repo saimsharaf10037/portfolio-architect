@@ -35,12 +35,6 @@ const VolunteerSection = () => {
     {
       main: "Coordinated with IMarEST members to deliver interactive guidance on professional registration, UK-SPEC competency mapping (CEng/IEng pathways), and evidence building for Chartered Engineer status",
     },
-    {
-      main: "Contributed to strengthening the local professional network and mentoring culture within Pakistan's maritime community",
-    },
-    {
-      main: "Supported follow-up coordination and continuity planning for future outreach sessions and IMarEST/RINA engagement activities",
-    },
   ];
 
   const impactChips = [
