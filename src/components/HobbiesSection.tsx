@@ -13,7 +13,7 @@ interface Hobby {
 
 const hobbies: Hobby[] = [
   {
-    image: { src: "/images/hobby-tennis.jpg", objectPosition: "center top" },
+    image: { src: "/images/hobby-tennis.jpg", objectPosition: "center 40%" },
     title: "Tennis",
     tag: "Competitive Sport · State Level",
     description: "Active tennis player with state-level tournament participation. I regularly compete in local tournaments and closely follow the International Grand Slams. Inspired by Roger Federer's discipline, consistency and sportsmanship.",
