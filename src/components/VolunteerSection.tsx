@@ -233,28 +233,9 @@ const VolunteerSection = () => {
 
             <div className="w-10 h-px bg-primary my-5" />
 
-            <p className="text-[1rem] text-muted-foreground leading-[1.7] mb-6" style={{ fontFamily: "var(--font-body)" }}>
-              The Technical Leadership Committee (TLC) works with the IMarEST Executive to establish and maintain the Institute's Technical Plan, drawing on input from Special Interest Groups (SIGs) and industry sources. As a TLC Volunteer, I contribute to shaping the technical direction of one of the world's leading marine engineering institutions — providing input on emerging priorities, reviewing technical outputs, and supporting the formation of new SIGs where relevant.
+            <p className="text-[0.92rem] text-muted-foreground leading-[1.65] max-w-[720px]" style={{ fontFamily: "var(--font-body)" }}>
+              Contributing to IMarEST's global Technical Plan by providing input on marine sector priorities, reviewing technical outputs, and supporting CPD initiatives across the engineering community.
             </p>
-
-            <p className="text-[0.85rem] text-primary font-heading tracking-[0.15em] uppercase mb-3">MY CONTRIBUTIONS</p>
-
-            <ul className="space-y-3">
-              {tlcBullets.map((b, i) => (
-                <motion.li
-                  key={i}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={bulletVariants}
-                  className="flex gap-2 text-[0.9rem] text-muted-foreground"
-                >
-                  <span className="text-primary mt-1 flex-shrink-0">●</span>
-                  <span>{b}</span>
-                </motion.li>
-              ))}
-            </ul>
 
             <div className="flex flex-wrap gap-2 mt-6">
               {tlcChips.map((chip, i) => (
