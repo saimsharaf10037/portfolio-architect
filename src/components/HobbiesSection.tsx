@@ -92,7 +92,7 @@ const HobbiesSection = () => {
                     alt={hobby.title}
                     className="w-full"
                     style={{
-                      height: 180,
+                      height: 220,
                       objectFit: "cover",
                       objectPosition: hobby.image.objectPosition,
                       borderRadius: "8px 8px 0 0",
