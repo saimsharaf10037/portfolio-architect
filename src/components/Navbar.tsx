@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 
@@ -18,14 +18,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center">
               <span className="font-heading text-sm font-bold text-primary">MSS</span>
             </div>
           </a>
 
-          {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -36,10 +34,18 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="https://www.linkedin.com/in/saim-sharaf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              <Linkedin size={20} />
+            </a>
             <ThemeToggle />
           </div>
 
-          {/* Mobile toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-foreground"
@@ -50,7 +56,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -70,6 +75,15 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="https://www.linkedin.com/in/saim-sharaf/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
+                className="text-sm font-heading text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+              >
+                <Linkedin size={16} /> LinkedIn
+              </a>
               <ThemeToggle />
             </div>
           </motion.div>
