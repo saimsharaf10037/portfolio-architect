@@ -2,26 +2,26 @@ import { motion } from "framer-motion";
 
 const timelineEvents = [
   {
-    year: "2024",
-    title: "MSc Advanced Naval Architecture (Distinction)",
-    institution: "University of Strathclyde, UK",
-    detail: "Thesis and coursework focus on hydrodynamics, hull form optimisation, and sustainable propulsion. EU-funded GATERs research project at Kelvin Hydrodynamics Lab.",
+    year: "2025–2026",
+    title: "Bureau Veritas Internship",
+    institution: "Commercial Shipping",
+    detail: "Conducting class surveys and onboard inspections on commercial vessels.",
     isCurrent: true,
   },
   {
-    year: "2023",
-    title: "Bureau Veritas Internship",
-    institution: "Commercial Shipping",
-    detail: "3-month internship conducting class surveys and onboard inspections on commercial vessels.",
+    year: "2022–2023",
+    title: "MSc Advanced Naval Architecture (Distinction)",
+    institution: "University of Strathclyde, UK",
+    detail: "Thesis and coursework focus on hydrodynamics, hull form optimisation, and sustainable propulsion. EU-funded GATERs research project at Kelvin Hydrodynamics Lab.",
   },
   {
-    year: "2013–2024",
+    year: "2015–2025",
     title: "Naval Officer",
     institution: "Pakistan Navy",
     detail: "Over 10 years serving across frigates, submarines, destroyers, patrol vessels, dredgers, and oil tankers. Decorations: Tamgha-e-Azam, Youm-e-Marka-e-Haq, 10 Years Service Medal.",
   },
   {
-    year: "2013",
+    year: "2016–2020",
     title: "BEng Mechanical Engineering (3.47 GPA)",
     institution: "NUST, Pakistan",
     detail: "National University of Sciences and Technology — foundation in thermodynamics, fluid mechanics, and structural analysis.",
