@@ -60,7 +60,7 @@ const ContactSection = () => {
     // Construct mailto link as fallback (no backend)
     const subject = encodeURIComponent(`Portfolio Contact from ${result.data.name}`);
     const body = encodeURIComponent(`Name: ${result.data.name}\nEmail: ${result.data.email}\n\n${result.data.message}`);
-    window.location.href = `mailto:saim.sharaf@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:saimsharaf10037@gmail.com?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
       setSubmitting(false);
