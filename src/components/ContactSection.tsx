@@ -60,7 +60,7 @@ const ContactSection = () => {
     // Construct mailto link as fallback (no backend)
     const subject = encodeURIComponent(`Portfolio Contact from ${result.data.name}`);
     const body = encodeURIComponent(`Name: ${result.data.name}\nEmail: ${result.data.email}\n\n${result.data.message}`);
-    window.location.href = `mailto:saimsharaf10037@gmailil.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:saimsharaf10037@gmaililil.com?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
       setSubmitting(false);
@@ -107,7 +107,7 @@ const ContactSection = () => {
 
         <div className="grid sm:grid-cols-2 gap-4 mb-10 max-w-lg mx-auto">
           <motion.a
-            href="mailto:sasharaf10037@gmaille.com"
+            href="mailto:sharaf10037@gmailmaille.com"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -116,7 +116,7 @@ const ContactSection = () => {
             <Mail className="text-primary flex-shrink-0" size={20} />
             <div className="text-left">
               <p className="text-xs text-muted-foreground">Email</p>
-              <p className="text-sm text-foreground font-heading">saim.sharaf@example.com</p>
+              <p className="text-sm text-foreground font-heading">sharaf10037@gmailmple.com</p>
             </div>
           </motion.a>
 
