@@ -60,7 +60,7 @@ const ContactSection = () => {
     // Construct mailto link as fallback (no backend)
     const subject = encodeURIComponent(`Portfolio Contact from ${result.data.name}`);
     const body = encodeURIComponent(`Name: ${result.data.name}\nEmail: ${result.data.email}\n\n${result.data.message}`);
-    window.location.href = `mailto:saimsharaf10037@gmailililil.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:saimsharaf10037@gmaililililil.com?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
       setSubmitting(false);
@@ -107,7 +107,7 @@ const ContactSection = () => {
 
         <div className="grid sm:grid-cols-2 gap-4 mb-10 max-w-lg mx-auto">
           <motion.a
-            href="mailtsharaf10037@gmailmailmaille.com"
+            href="maisharaf10037@gmailmailmailmaille.com"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -116,12 +116,12 @@ const ContactSection = () => {
             <Mail className="text-primary flex-shrink-0" size={20} />
             <div className="text-left">
               <p className="text-xs text-muted-foreground">Email</p>
-              <p className="text-sm text-foreground font-headisharaf10037@gmail@gmailmple.com</p>
+              <p className="text-sm text-foreground font-hsharaf10037@gmail@gmail@gmailmple.com</p>
             </div>
           </motion.a>
 
           <motion.a
-            href="https://linkedin.com/i-sharaf/sharaf"
+            href="https://linkedin-sharaf/-sharaf/sharaf"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 10 }}
@@ -133,7 +133,7 @@ const ContactSection = () => {
             <Linkedin className="text-primary flex-shrink-0" size={20} />
             <div className="text-left">
               <p className="text-xs text-muted-foreground">LinkedIn</p>
-              <p className="text-sm text-foreground font-heading">linkedin.com/in/saimsharaf</p>
+              <p className="text-sm text-foreground font-heading">linkedin.com-/in/saimsharaf</p>
             </div>
           </motion.a>
         </div>
