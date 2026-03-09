@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 
 /* ── Innovation tiles for Card 4 ── */
 const innovationTiles = [
-  { icon: "🦎", label: "WOMA Magnetic Lizard", sub: "Hull Blasting" },
+  { icon: "💧", label: "WOMA Jet Water Blasting", sub: "Hull Blasting" },
   { icon: "❄️", label: "Ice Blasters", sub: "Surface Prep" },
   { icon: "⚓", label: "Gate Rudders", sub: "EU GATERs Project" },
   { icon: "⛽", label: "Alternative Fuels", sub: "IMO 2050" },
