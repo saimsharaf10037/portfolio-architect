@@ -1,57 +1,144 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
-interface Hobby {
-  icon?: string;
-  image?: { src: string; objectPosition: string };
-  map?: boolean;
+/* ── Innovation tiles for Card 4 ── */
+const innovationTiles = [
+  { icon: "🦎", label: "WOMA Magnetic Lizard", sub: "Hull Blasting" },
+  { icon: "❄️", label: "Ice Blasters", sub: "Surface Prep" },
+  { icon: "⚓", label: "Gate Rudders", sub: "EU GATERs Project" },
+  { icon: "⛽", label: "Alternative Fuels", sub: "IMO 2050" },
+  { icon: "🎨", label: "Eco Coatings", sub: "Fouling Control" },
+  { icon: "🌊", label: "Bio-fouling", sub: "Tidal Turbines" },
+];
+
+const InnovationCollage = () => {
+  const [inView, setInView] = useState(false);
+
+  return (
+    <motion.div
+      onViewportEnter={() => setInView(true)}
+      viewport={{ once: true }}
+      style={{
+        width: "100%",
+        height: 200,
+        overflow: "hidden",
+        background: "#0A1628",
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gridTemplateRows: "repeat(2, 1fr)",
+        gap: 6,
+        padding: 8,
+      }}
+    >
+      {innovationTiles.map((tile, i) => (
+        <motion.div
+          key={tile.label}
+          initial={{ opacity: 0, y: 10 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: i * 0.05, duration: 0.35 }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "rgba(0,180,216,0.07)",
+            border: "1px solid rgba(0,180,216,0.18)",
+            borderRadius: 6,
+            padding: "10px 8px",
+          }}
+        >
+          <span style={{ fontSize: "1.4rem" }}>{tile.icon}</span>
+          <span
+            style={{
+              fontSize: "0.68rem",
+              fontFamily: "var(--font-heading)",
+              color: "#fff",
+              fontWeight: 600,
+              marginTop: 4,
+              textAlign: "center",
+              lineHeight: 1.2,
+            }}
+          >
+            {tile.label}
+          </span>
+          <span
+            style={{
+              fontSize: "0.6rem",
+              color: "#00B4D8",
+              textAlign: "center",
+              marginTop: 2,
+            }}
+          >
+            {tile.sub}
+          </span>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+};
+
+/* ── Card data ── */
+interface HobbyCard {
+  type: "photo" | "map" | "innovation";
+  imageSrc?: string;
+  imagePosition?: string;
   title: string;
   tag: string;
   description: string;
-  accentAmber?: boolean;
+  borderColor: string;
 }
 
-const hobbies: Hobby[] = [
+const cards: HobbyCard[] = [
   {
-    image: { src: "/images/hobby-tennis.jpg", objectPosition: "center 40%" },
+    type: "photo",
+    imageSrc: "/images/hobby-tennis.jpg",
+    imagePosition: "center 20%",
     title: "Tennis",
     tag: "Competitive Sport · State Level",
-    description: "Active tennis player with state-level tournament participation. I regularly compete in local tournaments and closely follow the International Grand Slams. Inspired by Roger Federer's discipline, consistency and sportsmanship.",
+    description:
+      "Active tennis player with state-level tournament participation. I regularly compete in local tournaments and closely follow the International Grand Slams. Inspired by Roger Federer's discipline, consistency and sportsmanship.",
+    borderColor: "#00B4D8",
   },
   {
-    map: true,
+    type: "map",
     title: "Travelling",
     tag: "26 Countries · 14 EU Nations",
-    description: "Travelled to 26 countries including 14 within the European Union, as well as South America, Asia and the Middle East. Passionate about backpacking and cultural exploration — it has broadened my global perspective, strengthened my adaptability and helped me integrate easily into diverse environments.",
+    description:
+      "Travelled to 26 countries including 14 within the European Union, as well as South America, Asia and the Middle East. Passionate about backpacking and cultural exploration — broadening my global perspective and adaptability across diverse environments.",
+    borderColor: "#00B4D8",
   },
   {
-    icon: "🏊",
+    type: "photo",
+    imageSrc: "/images/hobby-swimming.jpg",
+    imagePosition: "center 40%",
     title: "Swimming",
-    tag: "Competitive · National & International",
-    description: "Competitive swimmer since childhood, with participation in national and international events including competitions at Deniz Harp Okulu Turkish Naval Academy. Recipient of multiple medals. Swimming has strengthened my discipline, endurance and performance mindset.",
+    tag: "Open Water · National & International",
+    description:
+      "Competitive swimmer since childhood with participation in national and international events including competitions at Deniz Harp Okulu Turkish Naval Academy. Recipient of multiple medals. This open water swim in the Scottish Highlands reflects the endurance mindset swimming has built.",
+    borderColor: "#00B4D8",
   },
   {
-    icon: "💃",
-    title: "Latin Dancing",
-    tag: "Salsa & Bachata · Instructor",
-    description: "Practising for over 2 years with a growing passion for social dancing and Latin music. Conducted beginner workshops as an instructor in Islamabad and Karachi. Latin dancing has developed my confidence, stage presence and the ability to connect with diverse groups of people.",
-    accentAmber: true,
-  },
-  {
-    icon: "🌱",
+    type: "innovation",
     title: "Sustainable Innovation",
     tag: "Maritime Decarbonisation · IMO 2050",
-    description: "Strong interest in sustainable maritime solutions and regulatory-driven innovation. Currently developing a bio-fouling assessment framework to support performance optimisation and emissions reduction. Actively engaged with MARPOL regulations and the IMO 2050 net zero carbon emission goals.",
+    description:
+      "Strong interest in sustainable maritime solutions and regulatory-driven innovation. Actively developing a bio-fouling assessment framework, engaged with MARPOL regulations, and exploring emerging green technologies — from magnetic hull blasting systems to alternative fuels and eco-friendly coatings.",
+    borderColor: "#00B4D8",
   },
   {
-    image: { src: "/images/hobby-horse.jpg", objectPosition: "center 20%" },
+    type: "photo",
+    imageSrc: "/images/hobby-horse.jpg",
+    imagePosition: "center 35%",
     title: "Horse Riding & Polo",
     tag: "Competitive Equestrian · Awarded",
-    description: "Active equestrian with competitive riding experience from a young age. Awarded Best Rider of the Year (Under 18) in 2014 at Pano Aqil Cantt Saddle Club. Half-day horse riding in Campbeltown, Scotland. Occasionally participates in polo. Equestrian sport has strengthened balance, composure and decision-making under pressure.",
-    accentAmber: true,
+    description:
+      "Active equestrian with competitive riding experience from a young age. Awarded Best Rider of the Year (Under 18) in 2014 at Pano Aqil Cantt Saddle Club. Half-day horse riding in Campbeltown, Scotland. Equestrian sport has strengthened balance, composure and decision-making under pressure.",
+    borderColor: "#F4A261",
   },
 ];
 
+/* ── Component ── */
 const HobbiesSection = () => {
   return (
     <section id="hobbies" className="py-[120px] px-4" style={{ backgroundColor: "hsl(216, 42%, 16%)" }}>
@@ -62,77 +149,18 @@ const HobbiesSection = () => {
           The discipline, resilience and global perspective that shapes how I work.
         </p>
 
+        {/* Row 1: 3 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {hobbies.map((hobby, i) => {
-            const hasVisual = hobby.image || hobby.map;
-            return (
-              <motion.div
-                key={hobby.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="rounded-xl hover:-translate-y-[5px] transition-all duration-300 overflow-hidden"
-                style={{
-                  backgroundColor: "hsl(216, 53%, 13%)",
-                  borderTop: hasVisual ? "none" : `3px solid ${hobby.accentAmber ? "hsl(28, 88%, 67%)" : "hsl(193, 100%, 42%)"}`,
-                  padding: hasVisual ? 0 : 28,
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 32px rgba(0,180,216,0.12)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                }}
-              >
-                {/* Visual header */}
-                {hobby.image && (
-                  <img
-                    src={hobby.image.src}
-                    alt={hobby.title}
-                    className="w-full"
-                    style={{
-                      height: 220,
-                      objectFit: "cover",
-                      objectPosition: hobby.image.objectPosition,
-                      borderRadius: "8px 8px 0 0",
-                    }}
-                  />
-                )}
-                {hobby.map && (
-                  <div style={{ position: "relative", padding: "0 0 67% 0", height: 0, overflow: "hidden", borderRadius: "8px 8px 0 0" }}>
-                    <iframe
-                      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderRadius: "8px 8px 0 0" }}
-                      src="//www.fla-shop.com/visited-countries/embed/?st=AE%2CAT%2CBE%2CDK%2CEE%2CES%2CFI%2CFR%2CGB%2CHU%2CIE%2CIT%2CLK%2CMM%2CMT%2CMV%2CMX%2CMY%2CNL%2COM%2CPK%2CPT%2CQA%2CRO%2CSA%2CSE%2CSK%2CTH%2CTR&vc=1ca032&uc=b3c3ca&hc=40bfa6&bc=ffffff&ss=on"
-                      frameBorder="0"
-                      scrolling="no"
-                    />
-                  </div>
-                )}
+          {cards.slice(0, 3).map((card, i) => (
+            <HobbyCardComponent key={card.title} card={card} index={i} />
+          ))}
+        </div>
 
-                {/* Text content */}
-                <div style={{ padding: hasVisual ? 28 : 0 }}>
-                  {/* Emoji icon for non-visual cards */}
-                  {hobby.icon && (
-                    <motion.span
-                      initial={{ y: 0 }}
-                      whileInView={{ y: [-4, 0] }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.08 + 0.3, duration: 0.4 }}
-                      className="text-[48px] block"
-                    >
-                      {hobby.icon}
-                    </motion.span>
-                  )}
-                  <h3 className="font-heading text-[1.15rem] font-bold text-foreground mt-3.5">{hobby.title}</h3>
-                  <p className="text-[0.75rem] text-primary mt-1">{hobby.tag}</p>
-                  <p className="text-[0.9rem] text-muted-foreground leading-[1.65] mt-3" style={{ fontFamily: "var(--font-body)" }}>
-                    {hobby.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+        {/* Row 2: 2 cards centred */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5 max-w-[880px] mx-auto">
+          {cards.slice(3).map((card, i) => (
+            <HobbyCardComponent key={card.title} card={card} index={i + 3} />
+          ))}
         </div>
 
         {/* Closing quote */}
@@ -158,6 +186,85 @@ const HobbiesSection = () => {
         </motion.div>
       </div>
     </section>
+  );
+};
+
+/* ── Reusable card ── */
+const HobbyCardComponent = ({ card, index }: { card: HobbyCard; index: number }) => {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.08, duration: 0.45, ease: "easeOut" }}
+      className="rounded-xl overflow-hidden cursor-default"
+      style={{
+        backgroundColor: "#0F1E33",
+        borderTop: `3px solid ${card.borderColor}`,
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        transform: hovered ? "translateY(-5px)" : "translateY(0)",
+        boxShadow: hovered ? "0 12px 32px rgba(0,180,216,0.12)" : "none",
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      {/* Visual block */}
+      {card.type === "photo" && card.imageSrc && (
+        <div className="overflow-hidden">
+          <img
+            src={card.imageSrc}
+            alt={card.title}
+            className="w-full"
+            style={{
+              height: 200,
+              objectFit: "cover",
+              objectPosition: card.imagePosition,
+              transition: "transform 0.3s ease",
+              transform: hovered ? "scale(1.03)" : "scale(1)",
+            }}
+          />
+        </div>
+      )}
+      {card.type === "map" && (
+        <div style={{ position: "relative", padding: "0 0 60% 0", height: 0, overflow: "hidden" }}>
+          <iframe
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+            src="//www.fla-shop.com/visited-countries/embed/?st=AE%2CAT%2CBE%2CDK%2CEE%2CES%2CFI%2CFR%2CGB%2CHU%2CIE%2CIT%2CLK%2CMM%2CMT%2CMV%2CMX%2CMY%2CNL%2COM%2CPK%2CPT%2CQA%2CRO%2CSA%2CSE%2CSK%2CTH%2CTR&vc=1ca032&uc=b3c3ca&hc=40bfa6&bc=ffffff&ss=on"
+            frameBorder="0"
+            scrolling="no"
+          />
+        </div>
+      )}
+      {card.type === "innovation" && <InnovationCollage />}
+
+      {/* Text block */}
+      <div style={{ padding: 24 }}>
+        <h3
+          style={{
+            fontFamily: "var(--font-heading)",
+            fontSize: "1.15rem",
+            fontWeight: 700,
+            color: "#fff",
+          }}
+        >
+          {card.title}
+        </h3>
+        <p style={{ fontSize: "0.78rem", color: "#00B4D8", marginTop: 4 }}>{card.tag}</p>
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.9rem",
+            color: "#A0AEC0",
+            lineHeight: 1.65,
+            marginTop: 10,
+          }}
+        >
+          {card.description}
+        </p>
+      </div>
+    </motion.div>
   );
 };
 
