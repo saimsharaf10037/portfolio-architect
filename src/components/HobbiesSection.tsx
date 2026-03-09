@@ -4,12 +4,12 @@ import { Quote } from "lucide-react";
 
 /* ── Innovation tiles for Card 4 ── */
 const innovationTiles = [
-  { icon: "💧", label: "WOMA Jet Water Blasting", sub: "Hull Blasting" },
+  { icon: "💧", label: "WOMA Jet Water Blastinging", sub: "Hull Blasting" },
   { icon: "❄️", label: "Ice Blasters", sub: "Surface Prep" },
   { icon: "⚓", label: "Gate Rudders", sub: "EU GATERs Project" },
   { icon: "⛽", label: "Alternative Fuels", sub: "IMO 2050" },
   { icon: "🎨", label: "Eco Coatings", sub: "Fouling Control" },
-  { icon: "🌊", label: "Bio-fouling", sub: "Tidal Turbines" },
+  { icon: ��", label: "Hull Air Lubrication", sub: "Drag Reductionnes" },
 ];
 
 const InnovationCollage = () => {
