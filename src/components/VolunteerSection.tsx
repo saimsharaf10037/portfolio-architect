@@ -21,10 +21,10 @@ const VolunteerSection = () => {
   };
 
   const subItems = [
-    "26 Jan 2025 — Maritime Professionals, CILT Karachi",
-    "28 Sep 2025 — Pakistan Naval Officers, PNEC Karachi",
-    "29 Sep 2025 — PNEC-NUST Students, Karachi",
-    "26 Jan 2026 — PNEC-NUST Students & Faculty",
+    "Maritime Professionals, CILT Karachi",
+    "Pakistan Naval Officers, PNEC Karachi",
+    "PNEC-NUST Students, Karachi",
+    "PNEC-NUST Students & Faculty",
   ];
 
   const bullets = [
