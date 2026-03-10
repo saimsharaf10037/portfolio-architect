@@ -19,7 +19,7 @@ const CVPrintable = () => {
           <h1 className="text-3xl font-bold print:text-2xl">Mohammad Saim Sharaf</h1>
           <p className="text-[hsl(193,100%,42%)] font-semibold mt-1">Naval Architect & Marine Engineer</p>
           <p className="text-sm text-gray-600 mt-1">
-            CEng CMarEng (UKSPEC) · MIMarEST · AMRINA · PEC Reg. MECH/48054
+            CEng CMarEng (UK-SPEC) · MIMarEST · AMRINA · PEC Reg. MECH/48054
           </p>
         </header>
 

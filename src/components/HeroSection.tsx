@@ -68,7 +68,7 @@ const HeroSection = () => {
         >
           Pakistan Navy · Bureau Veritas · University of Strathclyde
           <br />
-          <span className="text-accent text-sm">Registered CEng & CMarEng (UKSPEC) — Awaiting Final Confirmation · MIMarEST · AMRINA</span>
+          <span className="text-accent text-sm">Registered CEng & CMarEng (UK-SPEC) — Awaiting Final Confirmation · MIMarEST · AMRINA</span>
         </motion.p>
 
         <motion.div
