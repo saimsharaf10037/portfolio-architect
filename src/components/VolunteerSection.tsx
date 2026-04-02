@@ -20,17 +20,9 @@ const VolunteerSection = () => {
     }),
   };
 
-  const subItems = [
-    "Maritime Professionals, CILT Karachi",
-    "Pakistan Naval Officers, PNEC Karachi",
-    "PNEC-NUST Students, Karachi",
-    "PNEC-NUST Students & Faculty",
-  ];
-
   const bullets = [
     {
-      main: "Helped organise Pakistan Joint Branch (IMarEST & RINA) Professional Awareness & Registration Sessions for the maritime community in Pakistan:",
-      subItems,
+      main: "Helped organise Pakistan Joint Branch (IMarEST & RINA) Professional Awareness & Registration Sessions for the maritime community in Pakistan",
     },
     {
       main: "Coordinated with IMarEST members to deliver interactive guidance on professional registration, UK-SPEC competency mapping (CEng/IEng pathways), and evidence building for Chartered Engineer status",
@@ -106,18 +98,7 @@ const VolunteerSection = () => {
                     className="flex gap-2 text-[0.9rem] text-muted-foreground"
                   >
                     <span className="text-primary mt-1 flex-shrink-0">●</span>
-                    <div>
-                      <span>{b.main}</span>
-                      {b.subItems && (
-                        <div className="mt-1 ml-2 space-y-0.5">
-                          {b.subItems.map((sub, j) => (
-                            <p key={j} className="text-[0.9rem]" style={{ color: "hsl(28, 88%, 67%)" }}>
-                              ↳ {sub}
-                            </p>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                    <span>{b.main}</span>
                   </motion.li>
                 ))}
               </ul>
