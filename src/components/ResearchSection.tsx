@@ -103,19 +103,18 @@ const ResearchSection = () => {
             <thead>
               <tr className="border-b border-border text-muted-foreground font-heading">
                 <th className="text-left p-3">Study</th>
-                <th className="text-left p-3 hidden sm:table-cell">Institution</th>
                 <th className="text-left p-3 hidden md:table-cell">Type</th>
               </tr>
             </thead>
             <tbody>
               {[
-                { title: "BOI — Watertight Integrity Breach, F-22P Frigate", institution: "Pakistan Navy", type: "Board of Investigation", slug: "boi-watertight-integrity" },
-                { title: "Root Cause Analysis — Oil Tanker", institution: "Pakistan Navy", type: "RCA", slug: "rca-oil-tanker" },
-                { title: "Galley Overheating — Ferry Vessel", institution: "Pakistan Navy", type: "Technical Analysis", slug: "galley-overheating" },
-                { title: "WT Integrity Risks — Marine Assault Boats", institution: "Pakistan Navy", type: "Technical Evaluation", slug: "wt-integrity-mabs" },
-                { title: "Slamming & Vibration — Offshore Patrol Vessel", institution: "Pakistan Navy", type: "Structural Assessment", slug: "slamming-vibration-opv" },
-                { title: "Fuel Stripping Arrangement — MABs", institution: "Pakistan Navy", type: "Feasibility Assessment", slug: "fuel-stripping-mabs" },
-                { title: "Watertight Door Seal Standardisation", institution: "Pakistan Navy", type: "Standardisation Study", slug: "watertight-seal-standardisation" },
+                { title: "BOI — Watertight Integrity Breach, F-22P Frigate", type: "Board of Investigation", slug: "boi-watertight-integrity" },
+                { title: "Root Cause Analysis — Oil Tanker", type: "RCA", slug: "rca-oil-tanker" },
+                { title: "Galley Overheating — Ferry Vessel", type: "Technical Analysis", slug: "galley-overheating" },
+                { title: "WT Integrity Risks — Marine Assault Boats", type: "Technical Evaluation", slug: "wt-integrity-mabs" },
+                { title: "Slamming & Vibration — Offshore Patrol Vessel", type: "Structural Assessment", slug: "slamming-vibration-opv" },
+                { title: "Fuel Stripping Arrangement — MABs", type: "Feasibility Assessment", slug: "fuel-stripping-mabs" },
+                { title: "Watertight Door Seal Standardisation", type: "Standardisation Study", slug: "watertight-seal-standardisation" },
               ].map((study, i) => (
                 <tr key={i} className="border-b border-border/50 hover:bg-secondary/30 transition-colors">
                   <td className="p-3">
@@ -123,7 +122,6 @@ const ResearchSection = () => {
                       {study.title}
                     </Link>
                   </td>
-                  <td className="p-3 text-muted-foreground hidden sm:table-cell">{study.institution}</td>
                   <td className="p-3 hidden md:table-cell">
                     <span className="px-2 py-0.5 bg-secondary text-muted-foreground rounded text-[10px] font-heading">
                       {study.type}

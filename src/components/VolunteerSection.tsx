@@ -20,17 +20,9 @@ const VolunteerSection = () => {
     }),
   };
 
-  const subItems = [
-    "Maritime Professionals, CILT Karachi",
-    "Pakistan Naval Officers, PNEC Karachi",
-    "PNEC-NUST Students, Karachi",
-    "PNEC-NUST Students & Faculty",
-  ];
-
   const bullets = [
     {
-      main: "Helped organise Pakistan Joint Branch (IMarEST & RINA) Professional Awareness & Registration Sessions for the maritime community in Pakistan:",
-      subItems,
+      main: "Helped organise Pakistan Joint Branch (IMarEST & RINA) Professional Awareness & Registration Sessions for the maritime community in Pakistan",
     },
     {
       main: "Coordinated with IMarEST members to deliver interactive guidance on professional registration, UK-SPEC competency mapping (CEng/IEng pathways), and evidence building for Chartered Engineer status",
