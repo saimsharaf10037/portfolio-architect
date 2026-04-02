@@ -98,18 +98,7 @@ const VolunteerSection = () => {
                     className="flex gap-2 text-[0.9rem] text-muted-foreground"
                   >
                     <span className="text-primary mt-1 flex-shrink-0">●</span>
-                    <div>
-                      <span>{b.main}</span>
-                      {b.subItems && (
-                        <div className="mt-1 ml-2 space-y-0.5">
-                          {b.subItems.map((sub, j) => (
-                            <p key={j} className="text-[0.9rem]" style={{ color: "hsl(28, 88%, 67%)" }}>
-                              ↳ {sub}
-                            </p>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                    <span>{b.main}</span>
                   </motion.li>
                 ))}
               </ul>
