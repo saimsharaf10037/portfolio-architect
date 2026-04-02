@@ -35,20 +35,13 @@ const VolunteerSection = () => {
     "CEng Pathway Guidance",
   ];
 
-  const tlcBullets = [
-    "Providing input on technical areas of current relevance to the global marine and offshore engineering sector",
-    "Contributing to IMarEST's view of the technical horizon and supporting the review of the Institute's published technical outputs",
-    "Contributing expert opinion to the Technical Plan and its administrative process of production and communication",
-    "Supporting Continuing Professional Development (CPD) initiatives across the marine engineering community",
-  ];
-
   const tlcChips = [
     "International · UK-Based Committee",
     "CPD · Technical Policy · SIG Development",
   ];
 
   return (
-    <section id="volunteer" className="py-[120px] md:py-[120px] py-[60px] px-4" style={{ backgroundColor: "hsl(216, 42%, 16%)" }}>
+    <section id="volunteer" className="py-[120px] md:py-[120px] py-[60px] px-4 bg-section-alt">
       <div className="max-w-6xl mx-auto">
         <p className="section-label text-center">GIVING BACK</p>
         <h2 className="section-heading text-center">Advancing the Maritime Profession</h2>
@@ -62,15 +55,14 @@ const VolunteerSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="rounded-xl p-8 md:p-10 mb-6 border-l-4 border-l-primary"
-          style={{ backgroundColor: "hsl(216, 53%, 13%)" }}
+          className="rounded-xl p-8 md:p-10 mb-6 border-l-4 border-l-primary bg-card-elevated"
         >
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Left column */}
             <div className="lg:w-[55%]">
               <div className="flex gap-2 flex-wrap">
-                <span className="px-3 py-1 rounded-full text-[0.75rem] font-heading font-semibold text-white bg-primary">IMarEST</span>
-                <span className="px-3 py-1 rounded-full text-[0.75rem] font-heading font-semibold text-white" style={{ backgroundColor: "hsl(28, 88%, 67%)" }}>RINA</span>
+                <span className="px-3 py-1 rounded-full text-[0.75rem] font-heading font-semibold text-primary-foreground bg-primary">IMarEST</span>
+                <span className="px-3 py-1 rounded-full text-[0.75rem] font-heading font-semibold text-accent-foreground bg-accent">RINA</span>
               </div>
 
               <h3 className="font-heading text-[1.5rem] font-bold text-foreground mt-3">
@@ -122,9 +114,9 @@ const VolunteerSection = () => {
               </div>
 
               {/* LinkedIn reference */}
-              <div className="mt-5 rounded-lg p-3 px-4 border-l-2 border-l-primary/40 text-[0.85rem]" style={{ backgroundColor: "hsl(216, 42%, 16%)" }}>
+              <div className="mt-5 rounded-lg p-3 px-4 border-l-2 border-l-primary/40 text-[0.85rem] bg-section-alt">
                 <div className="flex items-center gap-2 mb-1">
-                  <Linkedin size={14} className="text-blue-400" />
+                  <Linkedin size={14} className="text-primary" />
                   <span className="text-muted-foreground text-[0.75rem]">LinkedIn · Sep 2025</span>
                 </div>
                 <p className="italic text-muted-foreground">
@@ -144,7 +136,7 @@ const VolunteerSection = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-heading text-blue-400 border border-blue-400/30 bg-blue-400/5 hover:bg-blue-400/15 transition-colors"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-heading text-primary border border-primary/30 bg-primary/5 hover:bg-primary/15 transition-colors"
                     >
                       <Linkedin size={10} />
                       {link.label}
@@ -160,8 +152,7 @@ const VolunteerSection = () => {
                 <img
                   src="/images/pjb-session-group.png"
                   alt="IMarEST Awareness Session — PNEC, Karachi | 28 Sep 2025"
-                  className="w-full rounded-[10px]"
-                  style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.4)" }}
+                  className="w-full rounded-[10px] shadow-lg"
                 />
                 <p className="text-[0.75rem] text-muted-foreground italic text-center mt-2">
                   IMarEST Awareness Session — PNEC, Karachi | 28 Sep 2025
@@ -177,11 +168,10 @@ const VolunteerSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="rounded-xl p-8 md:p-10 mb-8 border-l-4 border-l-primary"
-          style={{ backgroundColor: "hsl(216, 53%, 13%)" }}
+          className="rounded-xl p-8 md:p-10 mb-8 border-l-4 border-l-primary bg-card-elevated"
         >
           <div className="max-w-[820px]">
-            <span className="px-3 py-1 rounded-full text-[0.75rem] font-heading font-semibold text-white bg-primary">IMarEST</span>
+            <span className="px-3 py-1 rounded-full text-[0.75rem] font-heading font-semibold text-primary-foreground bg-primary">IMarEST</span>
 
             <h3 className="font-heading text-[1.5rem] font-bold text-foreground mt-3">
               Volunteer — Technical Leadership Committee (TLC)
@@ -219,10 +209,7 @@ const VolunteerSection = () => {
         </motion.div>
 
         {/* Footer banner */}
-        <div
-          className="w-full rounded-lg h-16 flex items-center justify-center gap-2 text-[0.9rem]"
-          style={{ background: "linear-gradient(90deg, hsl(193 100% 42% / 0.15), transparent)" }}
-        >
+        <div className="w-full rounded-lg h-16 flex items-center justify-center gap-2 text-[0.9rem] bg-primary/10">
           <span className="text-muted-foreground">Interested in maritime education outreach or IMarEST/RINA collaboration?</span>
           <a href="#contact" className="text-primary underline underline-offset-4 hover:text-accent transition-colors font-heading">
             → Get in Touch
