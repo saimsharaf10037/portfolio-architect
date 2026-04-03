@@ -6,6 +6,7 @@ const cvOptions = [
   { label: "Naval Architect CV", file: "/cvs/Saim_Sharaf_CV_Naval_Architect.pdf" },
   { label: "Marine Engineer CV", file: "/cvs/Saim_Sharaf_CV_Marine_Engineer.pdf" },
   { label: "Marine Surveyor CV", file: "/cvs/Saim_Sharaf_CV_Marine_Surveyor.pdf" },
+  { label: "Project Engineer CV", file: "/cvs/Saim_Sharaf_CV_Project_Engineer.pdf" },
 ];
 
 const HeroSection = () => {

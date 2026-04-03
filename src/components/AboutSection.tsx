@@ -35,7 +35,7 @@ const AboutSection = () => {
                 My work spans complex vessel types and demanding marine environments, with expertise in hull form development, CFD, resistance and propulsion, sea-keeping and engineering design. I have also led the operation and maintenance of propulsion and auxiliary machinery onboard, and conducted hull and machinery surveys as well as onboard inspections with Bureau Veritas, combining analytical depth with commercial shipping experience.
               </p>
               <p>
-                I hold a BEng in Mechanical Engineering from NUST and an MSc in Advanced Naval Architecture with Distinction from the University of Strathclyde, UK. I am a UK SPEC registered Chartered Engineer (CEng CMarEng), currently based in the Netherlands and open to opportunities in marine surveying, naval architecture, marine engineering and field-based technical roles.
+                I hold a BEng in Mechanical Engineering from NUST and an MSc in Advanced Naval Architecture with Distinction from the University of Strathclyde, UK. I am a UK SPEC registered Chartered Engineer (CEng CMarEng), currently based in the Netherlands and open to opportunities in marine surveying, naval architecture, marine engineering, project engineering and field-based technical roles.
               </p>
             </div>
 
