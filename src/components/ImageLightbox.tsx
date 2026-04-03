@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Play } from "lucide-react";
 
 export type ProjectImage = {
   src: string;
   caption: string;
+  type?: "youtube";
 };
 
 interface ImageLightboxProps {
@@ -15,6 +16,11 @@ const ImageLightbox = ({ images }: ImageLightboxProps) => {
   const [selected, setSelected] = useState<ProjectImage | null>(null);
 
   if (images.length === 0) return null;
+
+  const getYouTubeId = (url: string) => {
+    const match = url.match(/(?:embed\/|watch\?v=|youtu\.be\/)([^&?/]+)/);
+    return match ? match[1] : "";
+  };
 
   return (
     <>
@@ -31,13 +37,29 @@ const ImageLightbox = ({ images }: ImageLightboxProps) => {
               onClick={() => setSelected(img)}
               className="group glass-card overflow-hidden text-left"
             >
-              <div className="aspect-video bg-secondary/50 flex items-center justify-center overflow-hidden">
-                <img
-                  src={img.src}
-                  alt={img.caption}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className="aspect-video bg-secondary/50 flex items-center justify-center overflow-hidden relative">
+                {img.type === "youtube" ? (
+                  <>
+                    <img
+                      src={`https://img.youtube.com/vi/${getYouTubeId(img.src)}/hqdefault.jpg`}
+                      alt={img.caption}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-background/30">
+                      <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                        <Play size={18} className="text-primary-foreground ml-0.5" />
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <img
+                    src={img.src}
+                    alt={img.caption}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                )}
               </div>
               <p className="text-[10px] text-muted-foreground italic p-2 line-clamp-2">{img.caption}</p>
             </motion.button>
@@ -68,11 +90,23 @@ const ImageLightbox = ({ images }: ImageLightboxProps) => {
               >
                 <X size={24} />
               </button>
-              <img
-                src={selected.src}
-                alt={selected.caption}
-                className="w-full rounded-lg border border-border"
-              />
+              {selected.type === "youtube" ? (
+                <div className="aspect-video w-full rounded-lg overflow-hidden border border-border">
+                  <iframe
+                    src={`${selected.src}?autoplay=1`}
+                    title={selected.caption}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              ) : (
+                <img
+                  src={selected.src}
+                  alt={selected.caption}
+                  className="w-full rounded-lg border border-border"
+                />
+              )}
               <p className="text-sm text-muted-foreground italic text-center mt-3">{selected.caption}</p>
             </motion.div>
           </motion.div>

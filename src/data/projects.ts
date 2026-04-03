@@ -41,7 +41,7 @@ export const projects: ProjectData[] = [
     images: [
       { src: "/images/gaters-steering-modes.png", caption: "GRS System and its Steering Modes" },
       { src: "/images/gaters-model-hull.png", caption: "Model Hull M1103 with fitted dynamometers" },
-      { src: "/images/gaters-performance.png", caption: "GRS Performance at 5° Angle, 1.325 m/s, 09 RPS at KHL" },
+      { type: "youtube", src: "https://www.youtube.com/embed/d44_MglXqE4", caption: "GRS Performance at 5° Angle, 1.325 m/s, 09 RPS at KHL" },
     ],
   },
   {
