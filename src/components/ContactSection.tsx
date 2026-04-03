@@ -89,7 +89,7 @@ const ContactSection = () => {
         <p className="section-label">GET IN TOUCH</p>
         <h2 className="section-heading">Open to Opportunities</h2>
         <p className="text-muted-foreground mb-6 max-w-xl mx-auto text-sm">
-          Available for naval architecture roles, marine engineering consultancy, and research collaborations globally.
+          Available for naval architecture roles, marine engineering consultancy, project engineering, and research collaborations globally.
           Currently based in the Netherlands with full EU working rights.
         </p>
 
