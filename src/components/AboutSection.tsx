@@ -52,7 +52,7 @@ const AboutSection = () => {
           >
             {/* Photo */}
             <div className="w-56 h-56 rounded-full border-4 border-primary/40 bg-card overflow-hidden">
-              <img src={profilePhoto} alt="Mohammad Saim Sharaf" className="w-full h-full object-cover" />
+              <img src={profilePhoto} alt="Mohammad Saim Sharaf" className="w-full h-full object-cover scale-150" style={{ objectPosition: 'center 25%' }} />
             </div>
 
             {/* Stat cards */}
