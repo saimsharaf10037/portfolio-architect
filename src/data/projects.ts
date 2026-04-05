@@ -89,7 +89,6 @@ export const projects: ProjectData[] = [
     keyMetric: { value: "5-Phase", label: "Investigation Conducted" },
     images: [
       { src: "/images/boi-sill-heights.png", caption: "Sill height of doors and hatches from deck" },
-      { src: "/images/boi-comparison-table.png", caption: "Comparison of classified frigates vs vessel under investigation" },
     ],
   },
   {
