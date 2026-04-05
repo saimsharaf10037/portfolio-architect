@@ -132,8 +132,8 @@ export const projects: ProjectData[] = [
     keyMetric: { value: "30%", label: "HVAC Shortfall Identified" },
     images: [
       { src: "/images/galley-isometric.png", caption: "Isometric view of ship's galley and adjacent compartments" },
-      { src: "/images/galley-exhaust.png", caption: "Exhaust fan arrangement inside ship's galley" },
-      { src: "/images/galley-arrangement.png", caption: "General arrangement of equipment fitted in the galley" },
+      { src: "/images/galley-equipment-layout.png", caption: "General arrangement of equipment fitted in the galley" },
+      { src: "/images/galley-exhaust-fans.png", caption: "Exhaust fan arrangement inside ship's galley" },
     ],
   },
   {
