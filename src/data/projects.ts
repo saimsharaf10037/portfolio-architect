@@ -170,7 +170,7 @@ export const projects: ProjectData[] = [
     outcome: "Speed restrictions recommended for specific sea states. Structural monitoring baseline established for future comparative analysis.",
     keyMetric: { value: "6", label: "Sensor Locations Assessed" },
     images: [
-      { src: "/images/opv-sensors.png", caption: "Selected sensor mounting locations" },
+      { src: "/images/opv-sensor-locations.png", caption: "Selected sensor mounting locations" },
     ],
   },
   {
