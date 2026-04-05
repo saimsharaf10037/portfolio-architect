@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageLightbox from "@/components/ImageLightbox";
 import KarachiHarbourChart from "@/components/KarachiHarbourChart";
+import BOIComparisonTable from "@/components/BOIComparisonTable";
 import ProjectHeroBanner from "@/components/ProjectHeroBanner";
 
 const tagColorMap: Record<string, string> = {
@@ -215,6 +216,9 @@ const ProjectDetail = () => {
             {project.images && project.images.length > 0 && (
               <ImageLightbox images={project.images} />
             )}
+
+            {/* BOI Comparison Table */}
+            {slug === "boi-watertight-integrity" && <BOIComparisonTable />}
 
             {/* Karachi Harbour Chart — only for RCA Oil Tanker */}
             {slug === "rca-oil-tanker" && <KarachiHarbourChart />}
