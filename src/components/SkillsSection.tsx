@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const skillGroups = [
   {
     title: "Software & Tools",
-    skills: ["ANSYS Fluent", "Star CCM+", "AutoCAD", "MaxSurf", "Rhino 3D", "MATLAB", "Python", "Excel", "ShipX"],
+    skills: ["ANSYS Fluent", "Star CCM+", "AutoCAD", "MaxSurf", "Rhino 3D", "MATLAB", "Python", "Excel", "ShipX", "FEA"],
   },
   {
     title: "Naval Disciplines",
