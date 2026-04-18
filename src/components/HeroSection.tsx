@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowDown, FileDown, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { SplineScene } from "@/components/ui/splite";
+import { Spotlight } from "@/components/ui/spotlight";
 
 const cvOptions = [
   { label: "Naval Architect CV", file: "/cvs/Saim_Sharaf_CV_Naval_Architect.pdf" },
@@ -34,8 +36,25 @@ const HeroSection = () => {
         <div className="absolute w-[600px] h-[600px] rounded-full border border-primary/10 animate-sonar-delayed-2" />
       </div>
 
+      {/* Spotlight effect */}
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="hsl(var(--primary))"
+      />
+
+      {/* 3D Spline scene - decorative */}
+      <div
+        className="absolute inset-y-0 right-0 w-full md:w-1/2 opacity-40 md:opacity-70 pointer-events-none md:pointer-events-auto"
+        aria-hidden="true"
+      >
+        <SplineScene
+          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+          className="w-full h-full"
+        />
+      </div>
+
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background md:bg-gradient-to-r md:from-background md:via-background/80 md:to-transparent" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.p
