@@ -241,10 +241,14 @@
   100% { transform: translateX(100%); }
 }
 
-/* Spline viewer transparency & watermark hiding */
-spline-viewer {
-  --background-color: transparent;
+/* Spline viewer transparency & watermark hiding (applies to light + dark) */
+spline-viewer,
+.light spline-viewer,
+.dark spline-viewer {
+  --background-color: transparent !important;
   background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 spline-viewer::part(watermark) {
