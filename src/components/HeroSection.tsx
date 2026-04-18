@@ -27,122 +27,117 @@ const HeroSection = () => {
   const titleWords = "Mohammad Saim Sharaf".split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-grain">
-      {/* Sonar wave background */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[600px] h-[600px] rounded-full border border-primary/20 animate-sonar" />
-        <div className="absolute w-[600px] h-[600px] rounded-full border border-primary/15 animate-sonar-delayed" />
-        <div className="absolute w-[600px] h-[600px] rounded-full border border-primary/10 animate-sonar-delayed-2" />
-      </div>
-
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden"
+      style={{ background: "transparent" }}
+    >
       {/* Spotlight effect */}
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="hsl(var(--primary))"
       />
 
-
-      {/* Soft radial overlay — keeps text readable without a hard split */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--background)/0.4)_0%,hsl(var(--background)/0.7)_70%,hsl(var(--background))_100%)] pointer-events-none" />
-
-      {/* Spline scene — paper boat floating over hero */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "transparent", border: "none" }}
-      >
-        {/* @ts-expect-error - spline-viewer is a custom element */}
-        <spline-viewer
-          url="https://prod.spline.design/PVMSRt-r9ltmBfGi/scene.splinecode"
-          style={{ width: "100%", height: "100%", background: "transparent", border: "none" }}
-        />
-      </motion.div>
-
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="section-label mb-4"
-        >
-          NAVAL ARCHITECT & MARINE ENGINEER
-        </motion.p>
-
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
-          {titleWords.map((word, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + i * 0.1, duration: 0.6 }}
-              className={`inline-block mr-3 ${i === titleWords.length - 1 ? "text-primary" : ""}`}
-            >
-              {word}
-            </motion.span>
-          ))}
-        </h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-          className="text-muted-foreground text-base sm:text-lg mb-10 max-w-2xl mx-auto"
-        >
-          Pakistan Navy · Bureau Veritas · University of Strathclyde
-          <br />
-          <span className="text-accent text-sm">Chartered Engineer (CEng) · Chartered Marine Engineer (CMarEng) · MIMarEST · AMRINA</span>
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <a
-            href="#research"
-            className="px-6 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-full hover:opacity-90 transition-opacity"
+      <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+        {/* LEFT — Text content */}
+        <div className="text-left md:pr-8">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="section-label mb-4"
           >
-            View Research
-          </a>
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setCvOpen((v) => !v)}
-              className="px-6 py-3 border border-foreground/30 text-foreground font-heading font-semibold text-sm rounded-full hover:border-primary hover:text-primary transition-colors flex items-center gap-2"
-            >
-              <FileDown size={16} />
-              Download CV
-              <ChevronDown size={14} className={`transition-transform ${cvOpen ? "rotate-180" : ""}`} />
-            </button>
-            {cvOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-56 rounded-lg border border-border bg-card shadow-xl overflow-hidden z-20">
-                {cvOptions.map((cv) => (
-                  <a
-                    key={cv.file}
-                    href={cv.file}
-                    download
-                    onClick={() => setCvOpen(false)}
-                    className="block px-4 py-3 text-sm font-heading text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                  >
-                    {cv.label}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-        </motion.div>
+            NAVAL ARCHITECT & MARINE ENGINEER
+          </motion.p>
 
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
+            {titleWords.map((word, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + i * 0.1, duration: 0.6 }}
+                className={`inline-block mr-3 ${i === titleWords.length - 1 ? "text-primary" : ""}`}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="text-muted-foreground text-base sm:text-lg mb-10 max-w-xl"
+          >
+            Pakistan Navy · Bureau Veritas · University of Strathclyde
+            <br />
+            <span className="text-accent text-sm">Chartered Engineer (CEng) · Chartered Marine Engineer (CMarEng) · MIMarEST · AMRINA</span>
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+          >
+            <a
+              href="#research"
+              className="px-6 py-3 bg-primary text-primary-foreground font-heading font-semibold text-sm rounded-full hover:opacity-90 transition-opacity"
+            >
+              View Research
+            </a>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setCvOpen((v) => !v)}
+                className="px-6 py-3 border border-foreground/30 text-foreground font-heading font-semibold text-sm rounded-full hover:border-primary hover:text-primary transition-colors flex items-center gap-2"
+              >
+                <FileDown size={16} />
+                Download CV
+                <ChevronDown size={14} className={`transition-transform ${cvOpen ? "rotate-180" : ""}`} />
+              </button>
+              {cvOpen && (
+                <div className="absolute left-0 mt-2 w-56 rounded-lg border border-border bg-card shadow-xl overflow-hidden z-20">
+                  {cvOptions.map((cv) => (
+                    <a
+                      key={cv.file}
+                      href={cv.file}
+                      download
+                      onClick={() => setCvOpen(false)}
+                      className="block px-4 py-3 text-sm font-heading text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                    >
+                      {cv.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="mt-16"
+          >
+            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+              <ArrowDown size={20} className="animate-bounce" />
+            </a>
+          </motion.div>
+        </div>
+
+        {/* RIGHT — Spline scene */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="mt-16"
+          transition={{ delay: 0.5, duration: 1 }}
+          className="relative h-[400px] md:h-[600px] w-full pointer-events-none"
+          style={{ background: "transparent", border: "none" }}
         >
-          <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-            <ArrowDown size={20} className="animate-bounce" />
-          </a>
+          {/* @ts-expect-error - spline-viewer is a custom element */}
+          <spline-viewer
+            url="https://prod.spline.design/PVMSRt-r9ltmBfGi/scene.splinecode"
+            style={{ width: "100%", height: "100%", background: "transparent", border: "none" }}
+          />
         </motion.div>
       </div>
     </section>
