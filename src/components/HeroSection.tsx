@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, FileDown, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 
 const cvOptions = [
