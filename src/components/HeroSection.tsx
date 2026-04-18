@@ -45,6 +45,18 @@ const HeroSection = () => {
       {/* Soft radial overlay — keeps text readable without a hard split */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--background)/0.4)_0%,hsl(var(--background)/0.7)_70%,hsl(var(--background))_100%)] pointer-events-none" />
 
+      {/* Spline scene — paper boat floating over hero */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-0 animate-fade-in"
+        style={{ animationDelay: "0.5s", animationFillMode: "forwards", background: "transparent", border: "none" }}
+      >
+        {/* @ts-expect-error - spline-viewer is a custom element */}
+        <spline-viewer
+          url="https://prod.spline.design/PVMSRt-r9ltmBfGi/scene.splinecode"
+          style={{ width: "100%", height: "100%", background: "transparent", border: "none" }}
+        />
+      </div>
+
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
