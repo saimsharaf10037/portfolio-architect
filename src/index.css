@@ -240,3 +240,18 @@
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
 }
+
+/* Spline viewer transparency & watermark hiding */
+spline-viewer {
+  --background-color: transparent;
+  background: transparent !important;
+}
+
+spline-viewer::part(watermark) {
+  display: none !important;
+}
+
+#logo {
+  display: none !important;
+}
+
