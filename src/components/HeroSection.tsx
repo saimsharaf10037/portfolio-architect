@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, FileDown, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 
 const cvOptions = [
@@ -44,12 +43,14 @@ const HeroSection = () => {
 
       {/* 3D Spline scene - decorative */}
       <div
-        className="absolute inset-y-0 right-0 w-full md:w-1/2 opacity-40 md:opacity-70 pointer-events-none md:pointer-events-auto"
+        className="absolute inset-y-0 right-0 w-full md:w-1/2 opacity-40 md:opacity-70 overflow-hidden pointer-events-none"
         aria-hidden="true"
+        style={{ pointerEvents: "none" }}
       >
-        <SplineScene
-          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-          className="w-full h-full"
+        {/* @ts-expect-error - spline-viewer is a custom web component */}
+        <spline-viewer
+          url="https://prod.spline.design/PVMSRt-r9ltmBfGi/scene.splinecode"
+          style={{ width: "100%", height: "100%", pointerEvents: "none" }}
         />
       </div>
 
