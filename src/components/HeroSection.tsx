@@ -43,9 +43,13 @@ const HeroSection = () => {
 
       {/* 3D Spline scene - decorative */}
       <div
-        className="absolute inset-y-0 right-0 w-full md:w-1/2 opacity-40 md:opacity-70 overflow-hidden pointer-events-none"
+        className="absolute inset-y-0 right-0 w-full md:w-1/2 opacity-0 md:opacity-70 overflow-hidden pointer-events-none animate-fade-in"
         aria-hidden="true"
-        style={{ pointerEvents: "none" }}
+        style={{ 
+          pointerEvents: "none",
+          animationDelay: "0.5s",
+          animationFillMode: "forwards"
+        }}
       >
         {/* @ts-expect-error - spline-viewer is a custom web component */}
         <spline-viewer
