@@ -54,8 +54,8 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background md:bg-gradient-to-r md:from-background md:via-background/80 md:to-transparent" />
+      {/* Soft radial overlay — keeps text readable without a hard split */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--background)/0.4)_0%,hsl(var(--background)/0.7)_70%,hsl(var(--background))_100%)] pointer-events-none" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.p
