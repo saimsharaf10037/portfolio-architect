@@ -37,9 +37,24 @@ const HeroSection = () => {
         fill="hsl(var(--primary))"
       />
 
-      <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-        {/* LEFT — Text content */}
-        <div className="text-left md:pr-8">
+      {/* Spline scene — absolute overlay, behind text */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{ background: "transparent", border: "none" }}
+      >
+        {/* @ts-expect-error - spline-viewer is a custom element */}
+        <spline-viewer
+          url="https://prod.spline.design/PVMSRt-r9ltmBfGi/scene.splinecode"
+          style={{ width: "100%", height: "100%", background: "transparent", border: "none" }}
+        />
+      </motion.div>
+
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+        {/* Text content with readable backdrop */}
+        <div className="text-left max-w-2xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
