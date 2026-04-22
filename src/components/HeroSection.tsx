@@ -52,7 +52,7 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-10 -translate-y-[50px]">
         {/* LEFT — Name block */}
         <div className="flex-1 text-left max-w-2xl hero-text-readable -translate-y-[10px]">
           <motion.p
