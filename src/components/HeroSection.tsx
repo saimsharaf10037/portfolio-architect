@@ -53,6 +53,18 @@ const HeroSection = () => {
       </motion.div>
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+        {/* Desktop-only credentials, positioned to the right of the boat */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9 }}
+          className="hidden md:block absolute top-1/2 -translate-y-1/2 right-6 md:right-12 lg:right-20 max-w-xs lg:max-w-sm text-right text-muted-foreground text-sm lg:text-base hero-text-readable"
+        >
+          Pakistan Navy · Bureau Veritas · University of Strathclyde
+          <br />
+          <span className="text-accent text-xs lg:text-sm">Chartered Engineer (CEng) · Chartered Marine Engineer (CMarEng) · MIMarEST · AMRINA</span>
+        </motion.p>
+
         {/* Text content with readable backdrop */}
         <div className="text-left max-w-2xl hero-text-readable">
           <motion.p
