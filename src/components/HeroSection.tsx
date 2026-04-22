@@ -54,7 +54,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-10 -translate-y-[50px]">
         {/* LEFT — Name block */}
-        <div className="flex-1 text-left max-w-2xl hero-text-readable -translate-y-[10px]">
+        <div className="flex-1 text-left max-w-2xl hero-text-readable">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
