@@ -142,13 +142,6 @@ const HeroSection = () => {
           <p className="text-accent text-xs sm:text-sm mt-2">
             Chartered Engineer (CEng) · Chartered Marine Engineer (CMarEng) · MIMarEST · AMRINA
           </p>
-          <p className="text-foreground/80 text-sm sm:text-base mt-6 leading-relaxed">
-            A decade of seagoing service, classification, and applied research —
-            bridging operational experience with technical authority.
-          </p>
-          <p className="text-muted-foreground text-xs sm:text-sm mt-3 italic">
-            Specialising in ship structures, stability, and marine systems integrity.
-          </p>
         </motion.div>
       </div>
     </section>
