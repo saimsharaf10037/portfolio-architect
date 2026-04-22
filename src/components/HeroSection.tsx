@@ -134,7 +134,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
-          className="flex-1 md:text-right max-w-md md:max-w-sm lg:max-w-md md:ml-auto hero-text-readable"
+          className="flex-1 md:text-right max-w-md md:max-w-sm lg:max-w-md md:ml-auto hero-text-readable -translate-y-10"
         >
           <p className="text-muted-foreground text-sm sm:text-base lg:text-lg">
             Pakistan Navy · Bureau Veritas · University of Strathclyde
