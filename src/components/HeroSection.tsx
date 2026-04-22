@@ -134,13 +134,20 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
-          className="flex-1 md:text-right max-w-md md:max-w-sm lg:max-w-md md:ml-auto hero-text-readable -translate-y-5"
+          className="flex-1 md:text-right max-w-md md:max-w-sm lg:max-w-md md:ml-auto hero-text-readable -translate-y-24 md:-translate-y-32"
         >
           <p className="text-muted-foreground text-sm sm:text-base lg:text-lg">
             Pakistan Navy · Bureau Veritas · University of Strathclyde
           </p>
           <p className="text-accent text-xs sm:text-sm mt-2">
             Chartered Engineer (CEng) · Chartered Marine Engineer (CMarEng) · MIMarEST · AMRINA
+          </p>
+          <p className="text-foreground/80 text-sm sm:text-base mt-6 leading-relaxed">
+            A decade of seagoing service, classification, and applied research —
+            bridging operational experience with technical authority.
+          </p>
+          <p className="text-muted-foreground text-xs sm:text-sm mt-3 italic">
+            Specialising in ship structures, stability, and marine systems integrity.
           </p>
         </motion.div>
       </div>
