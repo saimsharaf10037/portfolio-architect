@@ -54,7 +54,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
         {/* Text content with readable backdrop */}
-        <div className="text-left max-w-2xl">
+        <div className="text-left max-w-2xl hero-text-readable">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
