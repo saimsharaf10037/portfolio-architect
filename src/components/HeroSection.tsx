@@ -139,21 +139,6 @@ const HeroSection = () => {
             </a>
           </motion.div>
         </div>
-
-        {/* RIGHT — Spline scene */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="relative h-[400px] md:h-[600px] w-full pointer-events-none"
-          style={{ background: "transparent", border: "none" }}
-        >
-          {/* @ts-expect-error - spline-viewer is a custom element */}
-          <spline-viewer
-            url="https://prod.spline.design/PVMSRt-r9ltmBfGi/scene.splinecode"
-            style={{ width: "100%", height: "100%", background: "transparent", border: "none" }}
-          />
-        </motion.div>
       </div>
     </section>
   );
