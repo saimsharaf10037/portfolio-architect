@@ -37,12 +37,12 @@ const HeroSection = () => {
         fill="hsl(var(--primary))"
       />
 
-      {/* Spline scene — absolute overlay, behind text */}
+      {/* Spline scene — absolute overlay, shifted right so the boat clears the text */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="absolute inset-0 pointer-events-none z-0"
+        className="absolute inset-y-0 right-0 left-1/4 md:left-1/3 lg:left-[40%] pointer-events-none z-0"
         style={{ background: "transparent", border: "none" }}
       >
         {/* @ts-expect-error - spline-viewer is a custom element */}
