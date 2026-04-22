@@ -52,9 +52,9 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-10 -translate-y-[50px]">
         {/* LEFT — Name block */}
-        <div className="flex-1 text-left max-w-2xl hero-text-readable -translate-y-[10px]">
+        <div className="flex-1 text-left max-w-2xl hero-text-readable">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
-          className="flex-1 md:text-right max-w-md md:max-w-sm lg:max-w-md md:ml-auto hero-text-readable -translate-y-10"
+          className="flex-1 md:text-right max-w-md md:max-w-sm lg:max-w-md md:ml-auto hero-text-readable"
         >
           <p className="text-muted-foreground text-sm sm:text-base lg:text-lg">
             Pakistan Navy · Bureau Veritas · University of Strathclyde
