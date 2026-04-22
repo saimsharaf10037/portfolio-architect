@@ -82,7 +82,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="text-muted-foreground text-base sm:text-lg mb-10 max-w-xl"
+            className="text-muted-foreground text-base sm:text-lg mb-10 max-w-xl md:hidden"
           >
             Pakistan Navy · Bureau Veritas · University of Strathclyde
             <br />
