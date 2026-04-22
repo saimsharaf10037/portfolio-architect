@@ -259,3 +259,14 @@ spline-viewer::part(watermark) {
   display: none !important;
 }
 
+/* Hero text readability over Spline scene — both light & dark */
+.hero-text-readable h1,
+.hero-text-readable p {
+  text-shadow: 0 1px 2px hsl(var(--background) / 0.6), 0 0 18px hsl(var(--background) / 0.45);
+}
+
+.light .hero-text-readable h1,
+.light .hero-text-readable p {
+  text-shadow: 0 1px 2px hsl(var(--background) / 0.85), 0 0 16px hsl(var(--background) / 0.7);
+}
+
